@@ -416,6 +416,94 @@
     text-transform: uppercase;
   }
 
+  /* ── NOTARY SECTION ── */
+  .notary-section {
+    padding: 80px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+  }
+  .notary-section .section-eyebrow { margin-bottom: 16px; }
+  .notary-section h2 { margin-bottom: 16px; }
+  .notary-section p.notary-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    max-width: 480px;
+  }
+  .notary-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .notary-badge {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold-dim);
+    background: #c9a84c18;
+    padding: 5px 10px;
+    border-radius: 2px;
+  }
+  .notary-card {
+    background: var(--navy);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 28px;
+  }
+  .notary-card-header {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .notary-card-sub {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .notary-form { display: flex; flex-direction: column; gap: 10px; }
+  .notary-form input {
+    background: #0d1520;
+    border: 1px solid var(--rule);
+    color: var(--offwhite);
+    padding: 12px 14px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .notary-form input::placeholder { color: var(--muted); }
+  .notary-form input:focus { border-color: var(--gold); }
+  .notary-form button {
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 13px 20px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .notary-form button:hover { background: #e0b85a; }
+  .notary-fine-print {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 10px;
+    letter-spacing: 0.3px;
+  }
+
   /* ── ABOUT ── */
   .about-section {
     padding: 80px 48px;
@@ -588,7 +676,10 @@
     </svg>
     <div class="nav-logo">Ironbridge Strategy Group</div>
   </div>
-  <div class="nav-tag">Leadership Intelligence</div>
+  <div class="nav-tag" style="display:flex; align-items:center; gap:24px;">
+    <a href="#notary" style="color:inherit; text-decoration:none;">Notary Services</a>
+    <span>Leadership Intelligence</span>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -715,6 +806,38 @@
   </div>
 </section>
 
+<!-- NOTARY SERVICES -->
+<section class="notary-section" id="notary">
+  <div>
+    <div class="section-eyebrow">New Service</div>
+    <h2>Remote Online Notarization</h2>
+    <p class="notary-desc">Ironbridge now offers remote online notarization (RON) for individuals and businesses -- secure, recorded, two-way video sessions that meet Ohio's legal requirements for a fully remote signing. No driving, no waiting room, no back-and-forth on paperwork.</p>
+    <div class="notary-badges">
+      <span class="notary-badge">Ohio Commissioned Notary Public</span>
+      <span class="notary-badge">RON Authorized -- O.A.C. 111:6-1-05</span>
+    </div>
+    <ul class="magnet-features">
+      <li>Powers of attorney &amp; affidavits</li>
+      <li>Real estate &amp; loan closing documents</li>
+      <li>Business agreements &amp; corporate resolutions</li>
+      <li>Estate planning documents*</li>
+    </ul>
+    <p class="notary-fine-print" style="max-width:480px; margin-top:-8px;">*Electronic wills, powers of attorney, and living wills require additional bonding under Ohio HB 315 and are handled with the corresponding coverage in place.</p>
+  </div>
+  <div>
+    <div class="notary-card">
+      <div class="notary-card-header">Request a Notarization</div>
+      <div class="notary-card-sub">Ohio RON &nbsp;|&nbsp; Ironbridge Strategy Group</div>
+      <div class="notary-form" id="notary-form">
+        <input type="email" placeholder="Your email address" id="notary-email">
+        <button onclick="submitForm('notary')">Get Started</button>
+      </div>
+      <div class="ty-msg" id="notary-ty">Mission confirmed. Check your inbox.</div>
+      <p class="notary-fine-print">We'll follow up to confirm your document type, ID requirements, and a flat quote before scheduling your session.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section class="about-section">
   <div>
@@ -773,8 +896,9 @@
 
 <script>
   function submitForm(id) {
-    const name = id === 'hero' ? document.getElementById('hero-name').value.trim() : '';
-    const emailEl = document.getElementById(id === 'hero' ? 'hero-email' : 'footer-email');
+    const nameEl = document.getElementById(id + '-name');
+    const name = nameEl ? nameEl.value.trim() : '';
+    const emailEl = document.getElementById(id + '-email');
     const email = emailEl.value.trim();
 
     if (!email || !email.includes('@')) {
