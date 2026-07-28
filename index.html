@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ironbridge Strategy Group</title>
+<title>Ironbridge Strategy Group — DoD Program Management &amp; Instructional Design</title>
+<meta name="description" content="TS/SCI-cleared fractional program management and ADDIE/ISD instructional design for DoD training and workforce development contracts. Based near Wright-Patterson AFB.">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,9 +48,7 @@
     align-items: center;
     gap: 12px;
   }
-  .nav-icon {
-    flex-shrink: 0;
-  }
+  .nav-icon { flex-shrink: 0; }
   .nav-logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 18px;
@@ -75,13 +74,10 @@
     overflow: hidden;
   }
 
-  /* Signature element: vertical rule with rank marks */
   .hero::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
+    left: 0; top: 0; bottom: 0;
     width: 3px;
     background: linear-gradient(to bottom, transparent 0%, var(--gold) 20%, var(--gold) 80%, transparent 100%);
     opacity: 0.6;
@@ -107,11 +103,11 @@
 
   .hero h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(48px, 7vw, 96px);
-    line-height: 1.0;
-    letter-spacing: 2px;
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 1.05;
+    letter-spacing: 1px;
     color: var(--offwhite);
-    max-width: 820px;
+    max-width: 860px;
     margin-bottom: 12px;
   }
 
@@ -126,7 +122,7 @@
   .hero-sub {
     font-size: 16px;
     color: var(--muted);
-    max-width: 560px;
+    max-width: 600px;
     margin-bottom: 52px;
     line-height: 1.8;
     font-weight: 400;
@@ -139,7 +135,7 @@
     border-left: 3px solid var(--gold);
     border-radius: 0 8px 8px 0;
     padding: 32px 36px;
-    max-width: 520px;
+    max-width: 560px;
   }
   .cta-label {
     font-size: 10px;
@@ -152,61 +148,38 @@
     font-size: 18px;
     font-weight: 600;
     color: var(--offwhite);
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     line-height: 1.4;
   }
   .cta-desc {
     font-size: 13px;
     color: var(--muted);
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     line-height: 1.7;
   }
-  .cta-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .cta-form input {
-    background: #0d1520;
-    border: 1px solid var(--rule);
-    color: var(--offwhite);
-    padding: 12px 14px;
-    border-radius: 4px;
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .cta-form input::placeholder { color: var(--muted); }
-  .cta-form input:focus { border-color: var(--gold); }
-  .cta-form button {
+  .cta-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block;
     background: var(--gold);
     color: var(--black);
     border: none;
-    padding: 13px 20px;
+    padding: 14px 26px;
     border-radius: 4px;
     font-family: 'Inter', sans-serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
     transition: background 0.2s;
   }
-  .cta-form button:hover { background: #e0b85a; }
-  .cta-privacy {
-    font-size: 10px;
-    color: var(--muted);
-    margin-top: 8px;
-    letter-spacing: 0.5px;
-  }
+  .btn-primary:hover { background: #e0b85a; }
+  .cta-phone { font-size: 13px; color: var(--muted); }
+  .cta-phone a { color: var(--offwhite); text-decoration: none; border-bottom: 1px solid var(--gold-dim); }
 
   /* ── DIVIDER ── */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--rule);
-    margin: 0 48px;
-  }
+  .divider { border: none; border-top: 1px solid var(--rule); margin: 0 48px; }
 
   /* ── PROOF STRIP ── */
   .proof-strip {
@@ -216,18 +189,12 @@
     border-bottom: 1px solid var(--rule);
     overflow-x: auto;
   }
-  .proof-item {
-    padding: 28px 40px 28px 0;
-    flex-shrink: 0;
-  }
-  .proof-item + .proof-item {
-    border-left: 1px solid var(--rule);
-    padding-left: 40px;
-  }
+  .proof-item { padding: 28px 40px 28px 0; flex-shrink: 0; }
+  .proof-item + .proof-item { border-left: 1px solid var(--rule); padding-left: 40px; }
   .proof-num {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px;
-    letter-spacing: 2px;
+    font-size: 34px;
+    letter-spacing: 1px;
     color: var(--gold);
     line-height: 1;
   }
@@ -239,11 +206,8 @@
     margin-top: 4px;
   }
 
-  /* ── WHAT CHANGES SECTION ── */
-  .section {
-    padding: 80px 48px;
-    border-bottom: 1px solid var(--rule);
-  }
+  /* ── SECTION ── */
+  .section { padding: 80px 48px; border-bottom: 1px solid var(--rule); }
   .section-eyebrow {
     font-size: 10px;
     letter-spacing: 4px;
@@ -253,127 +217,110 @@
   }
   .section h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(32px, 4vw, 52px);
-    letter-spacing: 2px;
+    font-size: clamp(30px, 4vw, 48px);
+    letter-spacing: 1px;
     color: var(--offwhite);
-    max-width: 600px;
+    max-width: 680px;
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .section-lede {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 1.8;
     margin-bottom: 48px;
-    line-height: 1.1;
   }
 
-  .shift-grid {
+  /* ── CAPABILITY GRID ── */
+  .cap-grid {
     display: grid;
-    grid-template-columns: 1fr 48px 1fr;
-    gap: 0;
-    max-width: 700px;
-    align-items: start;
-  }
-  .shift-col-label {
-    font-size: 9px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--rule);
-  }
-  .shift-arrow-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2px;
-  }
-  .shift-items { display: flex; flex-direction: column; gap: 14px; }
-  .shift-item {
-    font-size: 13px;
-    color: var(--muted);
-    padding: 10px 14px;
-    background: var(--navy);
-    border: 1px solid var(--rule);
-    border-radius: 4px;
-    line-height: 1.5;
-  }
-  .shift-item.after {
-    color: var(--offwhite);
-    border-color: var(--gold-dim);
-    background: #131d2e;
-  }
-  .arrow-line {
-    width: 1px;
-    flex: 1;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
     background: var(--rule);
-    margin: 8px 0;
+    border: 1px solid var(--rule);
   }
-  .arrow-head {
-    font-size: 16px;
-    color: var(--gold);
+  .cap-card {
+    background: var(--black);
+    padding: 28px 26px;
   }
+  .cap-card-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--gold-dim);
+    margin-bottom: 14px;
+  }
+  .cap-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--offwhite);
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .cap-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
 
-  /* ── LEAD MAGNET SECTION ── */
-  .magnet-section {
+  /* ── ENGAGEMENT SECTION ── */
+  .engage-section {
     padding: 80px 48px;
     background: var(--navy);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
-    align-items: center;
+    align-items: start;
     border-bottom: 1px solid var(--rule);
   }
-  .magnet-label {
+  .engage-label {
     font-size: 10px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 16px;
   }
-  .magnet-section h2 {
+  .engage-section h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(28px, 3vw, 44px);
-    letter-spacing: 2px;
+    font-size: clamp(26px, 3vw, 40px);
+    letter-spacing: 1px;
     color: var(--offwhite);
     margin-bottom: 16px;
-    line-height: 1.1;
+    line-height: 1.15;
   }
-  .magnet-section p {
+  .engage-section > div:first-child > p {
     font-size: 14px;
     color: var(--muted);
     line-height: 1.8;
     margin-bottom: 28px;
+    max-width: 480px;
   }
-  .magnet-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
-  .magnet-features li {
-    font-size: 13px;
+  .engage-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+  .engage-list li {
+    padding-left: 20px;
+    border-left: 2px solid var(--gold-dim);
+  }
+  .engage-list .eng-title {
+    font-size: 14px;
+    font-weight: 600;
     color: var(--offwhite);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-bottom: 4px;
   }
-  .magnet-features li::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-    flex-shrink: 0;
-  }
+  .engage-list .eng-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-  /* planner preview card */
-  .planner-card {
+  /* performance card */
+  .perf-card {
     background: var(--black);
     border: 1px solid var(--rule);
     border-top: 3px solid var(--gold);
     border-radius: 4px;
     padding: 28px;
-    font-size: 12px;
   }
-  .planner-card-header {
+  .perf-card-header {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--gold);
     margin-bottom: 4px;
   }
-  .planner-card-sub {
+  .perf-card-sub {
     font-size: 9px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -382,28 +329,18 @@
     padding-bottom: 14px;
     border-bottom: 1px solid var(--rule);
   }
-  .planner-row {
+  .perf-row {
     display: flex;
+    justify-content: space-between;
     gap: 12px;
-    margin-bottom: 10px;
-    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 12px;
   }
-  .planner-row-label {
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    width: 80px;
-    flex-shrink: 0;
-    padding-top: 2px;
-  }
-  .planner-row-lines { flex: 1; }
-  .planner-line {
-    height: 1px;
-    background: var(--rule);
-    margin-bottom: 8px;
-  }
-  .planner-badge {
+  .perf-row:last-child { border-bottom: none; }
+  .perf-row-label { color: var(--muted); }
+  .perf-row-val { color: var(--offwhite); font-weight: 500; text-align: right; }
+  .perf-badge {
     display: inline-block;
     background: #c9a84c18;
     border: 1px solid var(--gold-dim);
@@ -412,7 +349,7 @@
     letter-spacing: 1px;
     padding: 3px 8px;
     border-radius: 2px;
-    margin-top: 14px;
+    margin-top: 16px;
     text-transform: uppercase;
   }
 
@@ -428,7 +365,7 @@
   .about-section blockquote {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: clamp(20px, 2.5vw, 28px);
+    font-size: clamp(19px, 2.3vw, 26px);
     color: var(--offwhite);
     line-height: 1.5;
     border-left: 2px solid var(--gold);
@@ -447,38 +384,16 @@
   }
   .about-body { font-size: 14px; color: var(--muted); line-height: 1.9; }
   .about-body p + p { margin-top: 16px; }
-  .cred-list {
-    list-style: none;
-    margin-top: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .cred-list li {
-    font-size: 12px;
-    color: var(--offwhite);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .cred-list li::before {
-    content: '';
-    width: 20px;
-    height: 1px;
-    background: var(--gold);
-    flex-shrink: 0;
-  }
+  .cred-list { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .cred-list li { font-size: 12px; color: var(--offwhite); display: flex; align-items: center; gap: 10px; }
+  .cred-list li::before { content: ''; width: 20px; height: 1px; background: var(--gold); flex-shrink: 0; }
 
   /* ── FOOTER CTA ── */
-  .footer-cta {
-    padding: 80px 48px;
-    text-align: center;
-    background: var(--navy);
-  }
+  .footer-cta { padding: 80px 48px; text-align: center; background: var(--navy); }
   .footer-cta h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(32px, 5vw, 64px);
-    letter-spacing: 3px;
+    font-size: clamp(30px, 4.5vw, 56px);
+    letter-spacing: 2px;
     color: var(--offwhite);
     margin-bottom: 16px;
     line-height: 1.1;
@@ -486,48 +401,11 @@
   .footer-cta p {
     font-size: 14px;
     color: var(--muted);
-    max-width: 480px;
+    max-width: 500px;
     margin: 0 auto 36px;
     line-height: 1.8;
   }
-  .footer-cta-form {
-    display: flex;
-    gap: 10px;
-    max-width: 440px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .footer-cta-form input {
-    flex: 1;
-    min-width: 200px;
-    background: #0d1520;
-    border: 1px solid var(--rule);
-    color: var(--offwhite);
-    padding: 13px 16px;
-    border-radius: 4px;
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    outline: none;
-  }
-  .footer-cta-form input:focus { border-color: var(--gold); }
-  .footer-cta-form input::placeholder { color: var(--muted); }
-  .footer-cta-form button {
-    background: var(--gold);
-    color: var(--black);
-    border: none;
-    padding: 13px 24px;
-    border-radius: 4px;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: background 0.2s;
-  }
-  .footer-cta-form button:hover { background: #e0b85a; }
+  .footer-cta-actions { display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap; }
 
   /* ── FOOTER ── */
   footer {
@@ -542,26 +420,21 @@
   footer .nav-logo { font-size: 14px; }
   footer p { font-size: 11px; color: var(--muted); }
 
-  /* ── THANK YOU STATE ── */
-  .ty-msg {
-    display: none;
-    font-size: 13px;
-    color: var(--gold);
-    letter-spacing: 1px;
-    margin-top: 10px;
-  }
-
   /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .cap-grid { grid-template-columns: 1fr 1fr; }
+    .engage-section { grid-template-columns: 1fr; }
+  }
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
     .hero { padding: 60px 24px 48px; min-height: auto; }
     .proof-strip { padding: 0 24px; }
     .section { padding: 60px 24px; }
-    .magnet-section { padding: 60px 24px; grid-template-columns: 1fr; gap: 40px; }
+    .cap-grid { grid-template-columns: 1fr; }
+    .engage-section { padding: 60px 24px; gap: 40px; }
     .about-section { padding: 60px 24px; grid-template-columns: 1fr; gap: 40px; }
     .footer-cta { padding: 60px 24px; }
     footer { padding: 20px 24px; }
-    .shift-grid { grid-template-columns: 1fr 32px 1fr; }
   }
 </style>
 </head>
@@ -588,129 +461,116 @@
     </svg>
     <div class="nav-logo">Ironbridge Strategy Group</div>
   </div>
-  <div class="nav-tag">Leadership Intelligence</div>
+  <div class="nav-tag">DoD Program Management &amp; Instructional Design</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">Ironbridge Strategy Group</div>
-  <h1>Most Professionals Are Promoted.<br><em>Nobody Teaches Them How to Lead.</em></h1>
-  <p class="hero-sub">Ironbridge equips new managers, corporate professionals, and transitioning veterans with battle-tested leadership frameworks from 25 years of military command -- translated for the modern workplace.</p>
+  <div class="hero-eyebrow">Ironbridge Strategy Group, LLC</div>
+  <h1>Cleared Program Management.<br><em>Ready for Your Next Training Contract.</em></h1>
+  <p class="hero-sub">Fractional program management and ADDIE/ISD instructional design for DoD training and workforce development contracts — led by a TS/SCI-cleared program manager who has already run a $30M+ federal training delivery contract. Based minutes from Wright-Patterson AFB.</p>
 
   <div class="cta-block">
-    <div class="cta-label">Free Resource</div>
-    <div class="cta-headline">The Battle Rhythm Planner for Corporate Leaders</div>
-    <div class="cta-desc">The same daily planning framework military commanders use to stay focused and execute under pressure -- in a one-page tool built for your workday.</div>
-    <div class="cta-form" id="hero-form">
-      <input type="text" placeholder="First name" id="hero-name">
-      <input type="email" placeholder="Work email address" id="hero-email">
-      <button onclick="submitForm('hero')">Send Me the Planner</button>
+    <div class="cta-label">Work With Ironbridge</div>
+    <div class="cta-headline">Request a Capability Statement or Schedule a Call</div>
+    <div class="cta-desc">Available now for subcontract program management, instructional systems design, and training delivery surge support. SDVOSB / 8(a) certification in process.</div>
+    <div class="cta-actions">
+      <a class="btn-primary" href="mailto:kwilliams@ironbridgestrategygroupllc.com?subject=Capability%20Statement%20Request">Email Kenyatta</a>
+      <span class="cta-phone">or call <a href="tel:+19374778210">937-477-8210</a></span>
     </div>
-    <div class="ty-msg" id="hero-ty">Mission confirmed. Check your inbox.</div>
-    <p class="cta-privacy">No spam. No fluff. Unsubscribe any time.</p>
   </div>
 </section>
 
 <!-- PROOF STRIP -->
 <div class="proof-strip">
   <div class="proof-item">
-    <div class="proof-num">25</div>
-    <div class="proof-lbl">Years USAF Leadership</div>
-  </div>
-  <div class="proof-item">
-    <div class="proof-num">294</div>
-    <div class="proof-lbl">Personnel Led</div>
-  </div>
-  <div class="proof-item">
-    <div class="proof-num">10</div>
-    <div class="proof-lbl">Geographically Separated Units</div>
-  </div>
-  <div class="proof-item">
     <div class="proof-num">$30M+</div>
-    <div class="proof-lbl">Programs Managed</div>
+    <div class="proof-lbl">DoD Training Contract Managed</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-num">3,000+</div>
+    <div class="proof-lbl">Students Trained Annually</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-num">25</div>
+    <div class="proof-lbl">Years DoD &amp; Federal Training</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-num">TS/SCI</div>
+    <div class="proof-lbl">Active Clearance</div>
   </div>
 </div>
 
-<!-- TRANSFORMATION SECTION -->
+<!-- CORE CAPABILITIES -->
 <section class="section">
-  <div class="section-eyebrow">The Ironbridge Shift</div>
-  <h2>From Individual Contributor to Confident Leader</h2>
+  <div class="section-eyebrow">Core Capabilities</div>
+  <h2>What Ironbridge Delivers</h2>
+  <p class="section-lede">Cleared program management and instructional design, ready to plug into an existing contract or stand up a new training effort.</p>
 
-  <div class="shift-grid">
-    <div>
-      <div class="shift-col-label">Where You Are</div>
-      <div class="shift-items">
-        <div class="shift-item">Solving every problem yourself</div>
-        <div class="shift-item">Managing by instinct, not framework</div>
-        <div class="shift-item">Promoted, but nobody trained you</div>
-        <div class="shift-item">Overwhelmed by people and priorities</div>
-      </div>
+  <div class="cap-grid">
+    <div class="cap-card">
+      <div class="cap-card-num">01</div>
+      <h3>Federal Training Program Management</h3>
+      <p>Budget ownership, risk registers, government client coordination, and DoD training compliance across multi-site delivery.</p>
     </div>
-    <div class="shift-arrow-col">
-      <div class="arrow-line"></div>
-      <div class="arrow-head">&#8594;</div>
-      <div class="arrow-line"></div>
+    <div class="cap-card">
+      <div class="cap-card-num">02</div>
+      <h3>Instructional Systems Design (ADDIE)</h3>
+      <p>Curriculum development, facilitator guides, and assessment instruments built to ADDIE/ISD standards for adult learners.</p>
     </div>
-    <div>
-      <div class="shift-col-label">Where You're Going</div>
-      <div class="shift-items">
-        <div class="shift-item after">Developing problem-solvers on your team</div>
-        <div class="shift-item after">Leading with clarity, standards, and trust</div>
-        <div class="shift-item after">Operating from a proven military playbook</div>
-        <div class="shift-item after">Taking care of the people in your charge</div>
-      </div>
+    <div class="cap-card">
+      <div class="cap-card-num">03</div>
+      <h3>LMS Deployment &amp; Administration</h3>
+      <p>Blackboard, Canvas, Moodle, SharePoint, ADLS, and JKO — course builds, account management, and reporting.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-card-num">04</div>
+      <h3>Agile / Scrum Delivery</h3>
+      <p>Certified Scrum Master running sprint planning, backlog management, and incremental delivery as the daily operating rhythm.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-card-num">05</div>
+      <h3>Workforce Development</h3>
+      <p>Instructor certification programs, training-needs assessment, and adult learning design at enterprise scale.</p>
+    </div>
+    <div class="cap-card">
+      <div class="cap-card-num">06</div>
+      <h3>Program Evaluation</h3>
+      <p>Knowledge checks, surveys, and assessment trackers that give government clients a clear read on training effectiveness.</p>
     </div>
   </div>
 </section>
 
-<!-- LEAD MAGNET SECTION -->
-<section class="magnet-section">
+<!-- ENGAGEMENT MODEL -->
+<section class="engage-section">
   <div>
-    <div class="magnet-label">Free Download</div>
-    <h2>The Battle Rhythm Planner</h2>
-    <p>Military commanders don't start their day scattered. They run a battle rhythm -- a structured daily brief that organizes priorities, people, and decisions before the day begins. This one-page planner brings that discipline to your workday.</p>
-    <ul class="magnet-features">
-      <li>Daily mission statement -- your single focus for the day</li>
-      <li>Top 3 priority tasks, ranked by impact</li>
-      <li>People check-in -- who needs your attention today</li>
-      <li>Decision log -- track what you decided and why</li>
-      <li>End-of-day after-action review -- 3 questions, 5 minutes</li>
+    <div class="engage-label">How We Engage</div>
+    <h2>Built to Plug Into Your Contract</h2>
+    <p>Ironbridge scopes engagements to what a program actually needs — a subcontractor who can start delivering immediately, not a long onboarding cycle.</p>
+    <ul class="engage-list">
+      <li>
+        <div class="eng-title">Fractional Program Management</div>
+        <div class="eng-desc">Ongoing part-time PM support — budget tracking, risk registers, status reporting, and client coordination.</div>
+      </li>
+      <li>
+        <div class="eng-title">ISD Sprint</div>
+        <div class="eng-desc">A scoped curriculum audit or build — ADDIE-based course design, facilitator guides, and assessment instruments delivered on a fixed timeline.</div>
+      </li>
+      <li>
+        <div class="eng-title">Surge PM / Delivery Support</div>
+        <div class="eng-desc">Short-term subcontract support during proposal ramp-up, staffing gaps, or delivery crunches on an existing training contract.</div>
+      </li>
     </ul>
   </div>
   <div>
-    <div class="planner-card">
-      <div class="planner-card-header">Battle Rhythm Planner</div>
-      <div class="planner-card-sub">Corporate Leaders Edition &nbsp;|&nbsp; Ironbridge Strategy Group</div>
-      <div class="planner-row">
-        <div class="planner-row-label">Mission</div>
-        <div class="planner-row-lines">
-          <div class="planner-line"></div>
-          <div class="planner-line"></div>
-        </div>
-      </div>
-      <div class="planner-row">
-        <div class="planner-row-label">Top 3</div>
-        <div class="planner-row-lines">
-          <div class="planner-line"></div>
-          <div class="planner-line"></div>
-          <div class="planner-line"></div>
-        </div>
-      </div>
-      <div class="planner-row">
-        <div class="planner-row-label">People</div>
-        <div class="planner-row-lines">
-          <div class="planner-line"></div>
-          <div class="planner-line"></div>
-        </div>
-      </div>
-      <div class="planner-row">
-        <div class="planner-row-label">After Action</div>
-        <div class="planner-row-lines">
-          <div class="planner-line"></div>
-          <div class="planner-line"></div>
-        </div>
-      </div>
-      <div class="planner-badge">Free Download</div>
+    <div class="perf-card">
+      <div class="perf-card-header">Past Performance</div>
+      <div class="perf-card-sub">$30M+ Air Force MRO Training Contract &nbsp;|&nbsp; Concept Plus, LLC</div>
+      <div class="perf-row"><span class="perf-row-label">Sites Delivered</span><span class="perf-row-val">Ogden, Oklahoma City, Warner Robins, Wright-Patterson</span></div>
+      <div class="perf-row"><span class="perf-row-label">Team Managed</span><span class="perf-row-val">20-person ISD &amp; SME team</span></div>
+      <div class="perf-row"><span class="perf-row-label">Delivery Model</span><span class="perf-row-val">Scrum / Agile, Certified Scrum Master</span></div>
+      <div class="perf-row"><span class="perf-row-label">Outcome</span><span class="perf-row-val">27 legacy systems consolidated; +37% end-user satisfaction</span></div>
+      <div class="perf-badge">Available for reference on request</div>
     </div>
   </div>
 </section>
@@ -719,32 +579,31 @@
 <section class="about-section">
   <div>
     <blockquote>
-      "Leadership is not about being in charge. It's about taking care of the people in your charge."
-      <cite>Simon Sinek &nbsp;|&nbsp; Confirmed by 25 years of command</cite>
+      "I've run the $30M program. I've built the curriculum. I know what a government client needs to see in a status report before they ask for it."
+      <cite>Kenyatta S. Williams &nbsp;|&nbsp; Founder &amp; Principal Consultant</cite>
     </blockquote>
   </div>
   <div class="about-body">
-    <p>Kenyatta S. Williams spent 25 years in the United States Air Force rising to Senior Master Sergeant -- leading 294 personnel across 10 geographically separated units, advising generals, and managing enterprise programs worth over $30 million.</p>
-    <p>Ironbridge Strategy Group exists to take everything that works in military leadership and make it available to the corporate world -- for the manager who was just promoted, the professional who feels overwhelmed, and the veteran who is ready to lead in a new arena.</p>
+    <p>Kenyatta S. Williams spent 25 years in the United States Air Force, retiring as a Senior Master Sergeant after directing the Air Force's largest Total Force Combat Weather Squadron and managing a $30M+ DoD training delivery contract at Concept Plus, LLC.</p>
+    <p>Ironbridge Strategy Group provides fractional program management and instructional systems design to DoD training contractors and primes who need a cleared professional who can start delivering immediately — not months into an onboarding cycle.</p>
     <ul class="cred-list">
-      <li>Senior Master Sergeant, USAF (Ret.)</li>
-      <li>PhD Candidate, Human Capital Management</li>
+      <li>Active TS/SCI Clearance</li>
+      <li>Certified Scrum Master (CSM)</li>
+      <li>Six Sigma Green Belt</li>
       <li>Certified Master Instructor (ADDIE/ISD)</li>
-      <li>Certified Scrum Master</li>
-      <li>Adjunct Professor, Columbia College &amp; Lindenwood University</li>
+      <li>Ph.D. Candidate, Human Capital Management</li>
     </ul>
   </div>
 </section>
 
 <!-- FOOTER CTA -->
 <section class="footer-cta">
-  <h2>Your First Mission Starts Here</h2>
-  <p>Download the Battle Rhythm Planner and build the daily leadership habit that separates commanders from contributors.</p>
-  <div class="footer-cta-form" id="footer-form">
-    <input type="email" placeholder="Your email address" id="footer-email">
-    <button onclick="submitForm('footer')">Get the Planner</button>
+  <h2>Let's Talk About Your Next Contract</h2>
+  <p>Whether it's surge PM support, an ISD sprint, or a fractional retainer — send over what you need and I'll respond within one business day.</p>
+  <div class="footer-cta-actions">
+    <a class="btn-primary" href="mailto:kwilliams@ironbridgestrategygroupllc.com?subject=Capability%20Statement%20Request">Email Kenyatta</a>
+    <span class="cta-phone">or call <a href="tel:+19374778210">937-477-8210</a></span>
   </div>
-  <div class="ty-msg" id="footer-ty" style="margin-top:16px;">Mission confirmed. Check your inbox.</div>
 </section>
 
 <!-- FOOTER -->
@@ -770,40 +629,6 @@
   </div>
   <p>&copy; 2026 Ironbridge Strategy Group, LLC &nbsp;&bull;&nbsp; Huber Heights, Ohio</p>
 </footer>
-
-<script>
-  function submitForm(id) {
-    const name = id === 'hero' ? document.getElementById('hero-name').value.trim() : '';
-    const emailEl = document.getElementById(id === 'hero' ? 'hero-email' : 'footer-email');
-    const email = emailEl.value.trim();
-
-    if (!email || !email.includes('@')) {
-      emailEl.style.borderColor = '#c84c4c';
-      setTimeout(() => emailEl.style.borderColor = '', 2000);
-      return;
-    }
-
-    // Submit to Mailchimp via hidden form
-    const mcForm = document.getElementById('mc-hidden-form');
-    document.getElementById('mc-email').value = email;
-    document.getElementById('mc-fname').value = name;
-    mcForm.submit();
-
-    // Hide form, show thank you
-    document.getElementById(id + '-form').style.display = 'none';
-    document.getElementById(id + '-ty').style.display = 'block';
-  }
-</script>
-
-<!-- Hidden Mailchimp form -->
-<form id="mc-hidden-form" action="https://app.us10.list-manage.com/subscribe/post?u=35409f9821855f767512ec8f5&amp;id=ee131f41b5&amp;f_id=00d891e3f0" method="post" target="_blank" style="display:none;">
-  <input type="email" name="EMAIL" id="mc-email" value="">
-  <input type="text" name="FNAME" id="mc-fname" value="">
-  <div aria-hidden="true" style="position: absolute; left: -5000px;">
-    <input type="text" name="b_35409f9821855f767512ec8f5_ee131f41b5" tabindex="-1" value="">
-  </div>
-  <input type="submit" value="Subscribe">
-</form>
 
 </body>
 </html>
