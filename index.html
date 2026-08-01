@@ -551,6 +551,19 @@
     margin-top: 10px;
   }
 
+  /* ── ACCESSIBILITY ── */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
@@ -602,11 +615,13 @@
     <div class="cta-headline">The Battle Rhythm Planner for Corporate Leaders</div>
     <div class="cta-desc">The same daily planning framework military commanders use to stay focused and execute under pressure -- in a one-page tool built for your workday.</div>
     <div class="cta-form" id="hero-form">
+      <label class="sr-only" for="hero-name">First name</label>
       <input type="text" placeholder="First name" id="hero-name">
+      <label class="sr-only" for="hero-email">Work email address</label>
       <input type="email" placeholder="Work email address" id="hero-email">
       <button onclick="submitForm('hero')">Send Me the Planner</button>
     </div>
-    <div class="ty-msg" id="hero-ty">Mission confirmed. Check your inbox.</div>
+    <div class="ty-msg" id="hero-ty" role="status" aria-live="polite">Mission confirmed. Check your inbox.</div>
     <p class="cta-privacy">No spam. No fluff. Unsubscribe any time.</p>
   </div>
 </section>
@@ -741,10 +756,11 @@
   <h2>Your First Mission Starts Here</h2>
   <p>Download the Battle Rhythm Planner and build the daily leadership habit that separates commanders from contributors.</p>
   <div class="footer-cta-form" id="footer-form">
+    <label class="sr-only" for="footer-email">Your email address</label>
     <input type="email" placeholder="Your email address" id="footer-email">
     <button onclick="submitForm('footer')">Get the Planner</button>
   </div>
-  <div class="ty-msg" id="footer-ty" style="margin-top:16px;">Mission confirmed. Check your inbox.</div>
+  <div class="ty-msg" id="footer-ty" role="status" aria-live="polite" style="margin-top:16px;">Mission confirmed. Check your inbox.</div>
 </section>
 
 <!-- FOOTER -->
